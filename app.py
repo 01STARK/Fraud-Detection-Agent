@@ -240,7 +240,7 @@ if not run_btn:
         st.markdown("### 📋 Analysis History")
         _df = pd.DataFrame(st.session_state.history)
         st.dataframe(
-            _df.style.applymap(
+            _df.style.map(
                 lambda v: f"color: {RISK_COLOR.get(v, '#ccc')}",
                 subset=["Risk Level"]
             ),
