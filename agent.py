@@ -31,7 +31,7 @@ import pandas as pd
 from groq import Groq
 
 # ── load AML source code ──────────────────────────────────────────────────────
-AML_SRC = Path(__file__).parent.parent / "08 AML" / "aml_detection"
+AML_SRC = Path(__file__).parent
 sys.path.insert(0, str(AML_SRC))
 
 from src.data_generator import generate_dataset
