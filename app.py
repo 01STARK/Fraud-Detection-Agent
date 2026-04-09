@@ -44,10 +44,12 @@ st.markdown("""
     padding: 16px;
     text-align: center;
     border: 1px solid #2d3148;
-    min-height: 130px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 .step-done   { border-color: #00cc66; }
 .step-active { border-color: #4a9eff; }
