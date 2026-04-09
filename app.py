@@ -44,6 +44,10 @@ st.markdown("""
     padding: 16px;
     text-align: center;
     border: 1px solid #2d3148;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .step-done   { border-color: #00cc66; }
 .step-active { border-color: #4a9eff; }
@@ -215,7 +219,7 @@ if not run_btn:
     c1, c2, c3, c4 = st.columns(4)
     for col, num, title, desc in [
         (c1, "①", "ML Scoring",    "IsolationForest anomaly detection"),
-        (c2, "②", "LLM Analysis",  "Claude explains the anomaly"),
+        (c2, "②", "LLM Analysis",  "Groq explains the anomaly"),
         (c3, "③", "Agent Decision","Autonomous BLOCK / FLAG / MONITOR"),
         (c4, "④", "Report",        "Structured JSON saved to disk"),
     ]:
