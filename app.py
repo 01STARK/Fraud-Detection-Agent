@@ -132,7 +132,7 @@ def feature_chart(features: dict) -> go.Figure:
     top = sorted(features.items(), key=lambda x: abs(x[1]), reverse=True)[:10]
     labels = [k.replace("_", " ") for k, _ in top]
     values = [v for _, v in top]
-    colors = ["#ff4b4b" if v > 1 else "#4a9eff" if v > 0 else "#555" for v in values]
+    colors = ["#ff4b4b" if v > 1 else "#4a9eff" if v > 0 else "#555" if v > -1 else "#2a6aad" for v in values]
 
     fig = go.Figure(go.Bar(
         x=values,

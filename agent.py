@@ -187,7 +187,8 @@ class FraudDetectionAgent:
         new_feat = feat_df.iloc[[-1]][self._feature_cols].fillna(0)
         X_scaled = self._scaler.transform(new_feat)
         score = float(self._model.anomaly_scores(X_scaled)[0])
-        return score, new_feat.iloc[0].to_dict()
+        scaled_features = pd.Series(X_scaled[0], index=self._feature_cols).to_dict()
+        return score, scaled_features
 
     # ── step 2 : LLM explanation ──────────────────────────────────────────────
 
